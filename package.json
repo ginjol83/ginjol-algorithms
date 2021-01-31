@@ -1,0 +1,36 @@
+{
+  "name": "voraz",
+  "version": "1.0.0",
+  "description": "Module for testing algorithms",
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.js",
+  "module": "dist/index.mjs",
+  "source": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "microbundle",
+    "prebuild": "npm run test",
+    "prepublish": "npm run build"
+  },
+  "keywords": [],
+  "author": "Andres Gimenez Perales",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/preset-env": "^7.12.11",
+    "another-module": "0.0.1",
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^26.6.3",
+    "babel-preset-env": "^1.7.0",
+    "husky": "^4.3.8",
+    "jest": "^26.6.3",
+    "lint-staged": "^10.5.3",
+    "microbundle": "^0.13.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  },
+  "files": ["dist", "package.json", "README.md"]
+}
