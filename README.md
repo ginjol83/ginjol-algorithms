@@ -11,5 +11,5 @@ it is a opensource implementation of distincts algorithms:
 6. Backtracking Algorithm
 
 
-in this version, only dijkstra algorithm (it's a Greedy Algorithm) is disponible
+In this version, only dijkstra algorithm (it's a Greedy Algorithm) is disponible
 

@@ -1,4 +1,4 @@
-import dijkstra from "../";
+import {dijkstra, kruskal, prim} from "../";
 
 // create a network
 const graph = { 

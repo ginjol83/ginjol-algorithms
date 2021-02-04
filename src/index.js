@@ -1,3 +1,9 @@
+//-------------1. Recursive Algorithm-------------------
+//-------------2. Divide and Conquer Algorithm----------
+//-------------3. Dynamic Programming Algorithm---------
+
+//-------------4. Greedy Algorithm----------------------
+
 //dijkstra graph starting at initialNode
 function dijkstra(graph, initialNode) {
     var solutions = {};
@@ -33,4 +39,16 @@ function dijkstra(graph, initialNode) {
     return solutions;
 }
 
-export default dijkstra;
+function prim(graph, initialNode) {
+  return graph
+}
+
+function kruskal(graph, initialNode) {
+  return graph
+}
+
+//-------------5. Brute Force Algorithm-----------------
+//-------------6. Backtracking Algorithm----------------
+
+
+export {dijkstra, kruskal, prim}
