@@ -1,6 +1,6 @@
 {
-  "name": "voraz",
-  "version": "1.0.0",
+  "name": "ginjol-algorithms",
+  "version": "1.0.3",
   "description": "Module for testing algorithms",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
@@ -32,5 +32,11 @@
       "pre-commit": "npm test"
     }
   },
-  "files": ["dist", "package.json", "README.md"]
+  "files": [
+    "package.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
