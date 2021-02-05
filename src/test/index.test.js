@@ -1,6 +1,7 @@
-import {dijkstra, kruskal, prim, mergeSort, quickhort } from "../";
-
-const array=[4, 8, 7, 2, 11, 1, 3]
+import {dijkstra, kruskal, prim, mergeSort, quickSort, linearSearch } from "../";
+  
+const array=[5,3,7,6,2,9];
+const items = [5,3,7,6,2,9];
 
 // create a network
 const graph = { 
@@ -32,9 +33,35 @@ describe("should return the minimum distance", () => {
 });
 
 describe("should return the sorted array", () => {
-    it("should return 1", () => {
+    it("should return 2", () => {
         const solution = mergeSort(array)
-        console.log('Solution is: '+solution)
-        expect(solution[0]).toEqual(1);
+        console.log('mergeSort Solution is: '+solution)
+        expect(solution).toEqual([2,3,5,6,7,9]);
+    });
+});
+
+
+describe("should return the sorted array", () => {
+    it("should return 2", () => {
+        const solution = quickSort(items, 0, items.length - 1)
+        console.log('quickSort Solution is: '+solution)
+        expect(solution).toEqual([2,3,5,6,7,9]);
+    });
+});
+
+
+describe("should return the finded element", () => {
+    it("should return 2", () => {
+        const solution = linearSearch([2,3,5,6,7,9], 7)
+        console.log('linearSearch Solution is: '+solution)
+        expect(solution).toEqual(4);
+    });
+});
+
+describe("should return the finded element", () => {
+    it("should return -1", () => {
+        const solution = linearSearch([2,3,5,6,7,9], 1)
+        console.log('linearSearch Solution is: '+solution)
+        expect(solution).toEqual(-1);
     });
 });
