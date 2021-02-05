@@ -1,54 +1,33 @@
-//-------------1. Recursive Algorithm-------------------
-//-------------2. Divide and Conquer Algorithm----------
-//-------------3. Dynamic Programming Algorithm---------
+import { dijkstraController }   from "./greedy/dijkstra";
+import { kruskalController }    from "./greedy/kruskal";
+import { primController }       from "./greedy/prim";
+import { mergeSortController } from "./divideAndConquerAlgorithm/mergeSort";
+import { quickSortController } from "./divideAndConquerAlgorithm/quickSort";
 
-//-------------4. Greedy Algorithm----------------------
+//#region 1. Recursive Algorithm
+//#endregion Recursive Algorithm
 
-//dijkstra graph starting at initialNode
-function dijkstra(graph, initialNode) {
-    var solutions = {};
-    solutions[initialNode] = [];
-    solutions[initialNode].distance = 0;
-    
-    while(true) {
-      var parent = null;
-      var nearest = null;
-      var distance = Infinity;
-      
-      //for each existing solution
-      for(var n in solutions) {
-        if(!solutions[n]) continue;
-        var ndistance = solutions[n].distance;
-        var adjacentNodes = graph[n];
+//#region 2. Divide and Conquer Algorithm
+function mergeSort(array) { return mergeSortController(array) }
 
-        for(var a in adjacentNodes) {
-          if(solutions[a]) continue;
-          var d = adjacentNodes[a] + ndistance;
-          if(d < distance) {
-            parent = solutions[n];
-            nearest = a;
-            distance = d;
-          }
-        }
-      }
-      //if no more solutions be break
-      if(distance === Infinity){break}
-      solutions[nearest] = parent.concat(nearest);
-      solutions[nearest].distance = distance;
-    }
-    return solutions;
-}
+function quickSort(graph, initialNode) { return quickSortController(graph, initialNode) }
+//#endregion Divide and Conquer Algorithm
 
-function prim(graph, initialNode) {
-  return graph
-}
+//#region 3. Dynamic Programming Algorithm
+//#endregion Dynamic Programming Algorithm
 
-function kruskal(graph, initialNode) {
-  return graph
-}
+//#region 4. Greedy Algorithm
+function dijkstra(graph, initialNode) { return dijkstraController(graph, initialNode) }
 
-//-------------5. Brute Force Algorithm-----------------
-//-------------6. Backtracking Algorithm----------------
+function prim(graph, initialNode) { return primController(graph, initialNode) }
 
+function kruskal(graph, initialNode) { return kruskalController(graph, initialNode) }
+//#endregion Greedy Algorithm
 
-export {dijkstra, kruskal, prim}
+//#region 5. Brute Force Algorithm
+//#endregion Brute Force Algorithm
+
+//#region 6. Backtracking Algorithm
+//#endregion Backtracking Algorithm
+
+export { dijkstra, kruskal, prim, mergeSort, quickSort }

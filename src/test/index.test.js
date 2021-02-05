@@ -1,4 +1,6 @@
-import {dijkstra, kruskal, prim} from "../";
+import {dijkstra, kruskal, prim, mergeSort, quickhort } from "../";
+
+const array=[4, 8, 7, 2, 11, 1, 3]
 
 // create a network
 const graph = { 
@@ -26,5 +28,13 @@ describe("should return the minimum distance", () => {
         const solution = dijkstra(graph,start)
         console.log('Solution is: '+solution)
         expect(solution.R[1]).toEqual('5');
+    });
+});
+
+describe("should return the sorted array", () => {
+    it("should return 1", () => {
+        const solution = mergeSort(array)
+        console.log('Solution is: '+solution)
+        expect(solution[0]).toEqual(1);
     });
 });
