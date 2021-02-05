@@ -3,13 +3,13 @@
 
 it is a opensource implementation of distincts algorithms:
 
-1. Recursive Algorithm
+1. Greedy Algorithm
 2. Divide and Conquer Algorithm
-3. Dynamic Programming Algorithm
-4. Greedy Algorithm
-5. Brute Force Algorithm
-6. Backtracking Algorithm
+3. Brute Force Algorithm
 
 
-In this version, only dijkstra algorithm (it's a Greedy Algorithm) is disponible
+Alghoritms supported in this version:
 
+Greedy => dijkstra
+Divide and conquer => mergeSort, quickSort
+BruteForce => linearSearch
