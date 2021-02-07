@@ -24,6 +24,27 @@ const graph = {
 
 var start = '10'
 
+
+var graphKruskal = ["A", "B", "C", "D", "E", "F", "G"];
+var edges = [
+    ["A", "B", 7], ["A", "D", 5],
+    ["B", "C", 8], ["B", "D", 9], ["B", "E", 7],
+    ["C", "E", 5],
+    ["D", "E", 15], ["D", "F", 6],
+    ["E", "F", 8], ["E", "G", 9],
+    ["F", "G", 11]
+];
+
+
+describe("should return the minimum distance", () => {
+    it("should return C,E,5,A,D,5,D,F,6,B,E,7,A,B,7,E,F,8,B,C,8,E,G,9", () => {
+        const solution = kruskal(graphKruskal,edges)
+        console.log('Kruskal solution is: '+solution)
+        expect(solution[0]).toEqual(["C", "E", 5]);
+    });
+});
+
+
 describe("should return the minimum distance", () => {
     it("should return 5", () => {
         const solution = dijkstra(graph,start)
