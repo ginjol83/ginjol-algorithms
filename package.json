@@ -1,6 +1,6 @@
 {
   "name": "ginjol-algorithms",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Module for testing algorithms",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
@@ -15,7 +15,9 @@
   "keywords": [],
   "author": "Andres Gimenez Perales",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "braces": "^3.0.2"
+  },
   "devDependencies": {
     "@babel/preset-env": "^7.12.11",
     "another-module": "0.0.1",
